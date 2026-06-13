@@ -6,69 +6,60 @@ body {
 }
 
 header {
-  background: #0d6efd;
-  color: white;
+  background: #111827;
   padding: 15px;
   text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.card {
-  background: #ffffff;
-  color: #111;
-  padding: 15px;
-  border-radius: 12px;
-  width: 160px;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.hero button {
-  padding: 10px 20px;
-  border: none;
-  background: white;
-  color: #0d6efd;
+#cart {
+  background: #22c55e;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: black;
   font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .products {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
 .card {
   background: white;
-  margin: 10px;
+  color: black;
   padding: 15px;
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 180px;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
-.card button {
-  background: #0d6efd;
+.card:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background: #2563eb;
   color: white;
   border: none;
   padding: 8px;
   cursor: pointer;
   border-radius: 5px;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #222;
-  color: white;
-  margin-top: 20px;
   }
