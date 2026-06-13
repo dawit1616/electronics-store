@@ -1,11 +1,9 @@
 let cart = [];
 
 const cartDisplay = document.getElementById("cart");
-const buttons = document.querySelectorAll("button");
-
 const products = document.querySelectorAll(".card");
 
-products.forEach((product, index) => {
+products.forEach((product) => {
   const button = product.querySelector("button");
   const name = product.querySelector("h3").innerText;
   const priceText = product.querySelector("p").innerText;
@@ -13,7 +11,6 @@ products.forEach((product, index) => {
 
   button.addEventListener("click", () => {
     cart.push({ name, price });
-
     updateCart();
   });
 });
@@ -25,8 +22,6 @@ function updateCart() {
     total += item.price;
   });
 
-  if (cartDisplay) {
-    cartDisplay.textContent =
-      "🛒 Items: " + cart.length + " | 💰 Total: " + total + " ETB";
-  }
+  cartDisplay.textContent =
+    "🛒 Items: " + cart.length + " | 💰 Total: " + total + " ETB";
 }
