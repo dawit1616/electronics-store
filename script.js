@@ -1,15 +1,11 @@
 let cartCount = 0;
 
-const cartDisplay = document.getElementById("cart");
-
+const cart = document.getElementById("cart");
 const buttons = document.querySelectorAll("button");
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
     cartCount++;
-
-    if (cartDisplay) {
-      cartDisplay.textContent = "🛒 Cart: " + cartCount;
-    }
+    cart.textContent = "🛒 Cart: " + cartCount;
   });
 });
