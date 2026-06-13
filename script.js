@@ -1,27 +1,24 @@
-let cart = [];
+document.addEventListener("DOMContentLoaded", () => {
 
-const cartDisplay = document.getElementById("cart");
-const products = document.querySelectorAll(".card");
+  let cart = [];
 
-products.forEach((product) => {
-  const button = product.querySelector("button");
-  const name = product.querySelector("h3").innerText;
-  const priceText = product.querySelector("p").innerText;
-  const price = parseInt(priceText.replace(/[^0-9]/g, ""));
+  const cartDisplay = document.getElementById("cart");
+  const products = document.querySelectorAll(".card");
 
-  button.addEventListener("click", () => {
-    cart.push({ name, price });
-    updateCart();
+  products.forEach((product) => {
+    const button = product.querySelector("button");
+    const priceText = product.querySelector("p").innerText;
+    const price = parseInt(priceText.replace(/[^0-9]/g, ""));
+
+    button.addEventListener("click", () => {
+      cart.push(price);
+
+      let total = 0;
+      cart.forEach(item => total += item);
+
+      cartDisplay.textContent =
+        `🛒 Items: ${cart.length} | 💰 Total: ${total} ETB`;
+    });
   });
+
 });
-
-function updateCart() {
-  let total = 0;
-
-  cart.forEach(item => {
-    total += item.price;
-  });
-
-  cartDisplay.textContent =
-    "🛒 Items: " + cart.length + " | 💰 Total: " + total + " ETB";
-}
