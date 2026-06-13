@@ -1,71 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dawit Electronics Store</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<header>
+  <div class="top-bar">
+    <h1>⚡ Dawit Electronics</h1>
 
-<body>
+    <input
+      type="text"
+      placeholder="Search products..."
+      class="search-box"
+    >
 
-  <header id="home">
-    <h1>⚡ Dawit Electronics Store</h1>
+    <span id="cart">🛒 Cart: 0</span>
+  </div>
+</header>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
+<main>
 
-      <span id="cart">🛒 Items: 0 | 💰 Total: 0 ETB</span>
-    </nav>
-  </header>
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li>Phones</li>
+      <li>Laptops</li>
+      <li>Headphones</li>
+      <li>Smart Watches</li>
+    </ul>
+  </aside>
 
-  <section class="hero">
-    <h2>Welcome to Dawit Electronics Store</h2>
-    <p>Quality electronics at affordable prices.</p>
+  <section class="products">
+    <!-- Product cards here -->
   </section>
 
-  <section id="products" class="products">
-
-    <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Smartphone">
-      <h3>Smartphone</h3>
-      <p>15000 ETB</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Laptop">
-      <h3>Laptop</h3>
-      <p>45000 ETB</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Headphones">
-      <h3>Headphones</h3>
-      <p>2500 ETB</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Smart Watch">
-      <h3>Smart Watch</h3>
-      <p>5000 ETB</p>
-      <button>Add to Cart</button>
-    </div>
-
-  </section>
-
-  <footer id="contact">
-    <h3>Contact Us</h3>
-    <p>Email: info@dawitelectronics.com</p>
-    <p>Phone: +251 900 000 000</p>
-    <p>© 2026 Dawit Electronics Store</p>
-  </footer>
-
-  <script src="script.js"></script>
-
-</body>
-  </html>
+</main>
